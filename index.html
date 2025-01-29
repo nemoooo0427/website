@@ -60,10 +60,32 @@
             border-radius: 5px;
             cursor: pointer;
         }
+        .popup-img {
+            width: 100%;
+            max-width: 500px;
+            display: block;
+            margin: 20px auto;
+        }
     </style>
     <script>
-        function showPopup(title, content) {
-            alert(title + "\n\n" + content);
+        function showPopup(title, imgPath) {
+            let popup = window.open("", "popup", "width=600,height=600");
+            popup.document.write(`
+                <html>
+                <head>
+                    <title>${title}</title>
+                    <style>
+                        body { text-align: center; font-family: Arial, sans-serif; }
+                        img { max-width: 90%; height: auto; margin-top: 20px; }
+                    </style>
+                </head>
+                <body>
+                    <h2>${title}</h2>
+                    <img src="${imgPath}" alt="${title}" class="popup-img">
+                </body>
+                </html>
+            `);
+            popup.document.close();
         }
     </script>
 </head>
@@ -79,9 +101,9 @@
             
             <div class="spider-section">
                 <h2>使用 Selenium 制作的爬虫程序</h2>
-                <button onclick="showPopup('词云图', '这是豆瓣的词云图分析')">豆瓣</button>
-                <button onclick="showPopup('词云图', '这是小红书的词云图分析')">小红书 - 词云图</button>
-                <button onclick="showPopup('Gephi 语义网络', '这是小红书的 Gephi 语义网络分析')">小红书 - Gephi 语义网络</button>
+                <button onclick="showPopup('词云图', 'https://raw.githubusercontent.com/nemoooo0427/website/main/Figure_1.png')">豆瓣</button>
+                <button onclick="showPopup('词云图', 'https://raw.githubusercontent.com/nemoooo0427/website/main/wordcloud_output.png')">小红书 - 词云图</button>
+                <button onclick="showPopup('Gephi 语义网络', 'https://raw.githubusercontent.com/nemoooo0427/website/main/gephi截图.png')">小红书 - Gephi 语义网络</button>
             </div>
         </div>
     </div>
