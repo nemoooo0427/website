@@ -21,7 +21,7 @@
         .hero {
             height: 80vh;
             background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)),
-                        url('https://example.com/hero-bg.jpg') center/cover;
+                        url('https://github.com/nemoooo0427/website/blob/main/page1.jpg') center/cover;
             display: flex;
             align-items: center;
             justify-content: center;
