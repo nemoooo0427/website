@@ -60,32 +60,41 @@
             border-radius: 5px;
             cursor: pointer;
         }
-        .popup-img {
-            width: 100%;
-            max-width: 500px;
+        .popup {
+            display: none;
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+            text-align: center;
+        }
+        .popup img {
+            max-width: 100%;
+            height: auto;
+        }
+        .popup .close {
             display: block;
-            margin: 20px auto;
+            margin-top: 10px;
+            padding: 5px 10px;
+            background: #c25180;
+            color: white;
+            border: none;
+            cursor: pointer;
+            border-radius: 5px;
         }
     </style>
     <script>
         function showPopup(title, imgPath) {
-            let popup = window.open("", "popup", "width=600,height=600");
-            popup.document.write(`
-                <html>
-                <head>
-                    <title>${title}</title>
-                    <style>
-                        body { text-align: center; font-family: Arial, sans-serif; }
-                        img { max-width: 90%; height: auto; margin-top: 20px; }
-                    </style>
-                </head>
-                <body>
-                    <h2>${title}</h2>
-                    <img src="${imgPath}" alt="${title}" class="popup-img">
-                </body>
-                </html>
-            `);
-            popup.document.close();
+            document.getElementById("popup-title").innerText = title;
+            document.getElementById("popup-img").src = imgPath;
+            document.getElementById("popup").style.display = "block";
+        }
+        function closePopup() {
+            document.getElementById("popup").style.display = "none";
         }
     </script>
 </head>
@@ -106,6 +115,12 @@
                 <button onclick="showPopup('Gephi 语义网络', 'https://raw.githubusercontent.com/nemoooo0427/website/main/gephi截图.png')">小红书 - Gephi 语义网络</button>
             </div>
         </div>
+    </div>
+    
+    <div id="popup" class="popup">
+        <h2 id="popup-title"></h2>
+        <img id="popup-img" src="" alt="Popup Image">
+        <button class="close" onclick="closePopup()">关闭</button>
     </div>
 </body>
 </html>
