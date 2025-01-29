@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>好东西 - 电影专题</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Microsoft YaHei', sans-serif;
+            line-height: 1.8;
+            background: #0a0a0a;
+            color: #ffffff;
+        }
+
+        .hero {
+            height: 80vh;
+            background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)),
+                        url('https://example.com/hero-bg.jpg') center/cover;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            margin-bottom: 50px;
+        }
+
+        .hero-content {
+            max-width: 800px;
+            padding: 20px;
+        }
+
+        .movie-title {
+            font-size: 4em;
+            text-transform: uppercase;
+            letter-spacing: 3px;
+            margin-bottom: 20px;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+            color: #ff4757;
+        }
+
+        .tagline {
+            font-size: 1.5em;
+            color: #dfe4ea;
+            margin-bottom: 30px;
+        }
+
+        .movie-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        .movie-details {
+            display: grid;
+            grid-template-columns: 1fr 2fr;
+            gap: 40px;
+            margin-bottom: 50px;
+        }
+
+        .poster {
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 10px 20px rgba(0,0,0,0.3);
+        }
+
+        .poster img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        .info-box {
+            background: #1a1a1a;
+            padding: 30px;
+            border-radius: 10px;
+        }
+
+        .specs {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+            margin-bottom: 30px;
+        }
+
+        .spec-item {
+            text-align: center;
+            padding: 15px;
+            background: #2d2d2d;
+            border-radius: 5px;
+        }
+
+        .spec-label {
+            color: #ff6b81;
+            font-size: 0.9em;
+            margin-bottom: 5px;
+        }
+
+        .spec-value {
+            font-size: 1.2em;
+            font-weight: bold;
+        }
+
+        .synopsis {
+            font-size: 1.1em;
+            color: #ced6e0;
+            margin: 30px 0;
+        }
+
+        .cast-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            gap: 20px;
+            margin-top: 30px;
+        }
+
+        .cast-member {
+            text-align: center;
+        }
+
+        .cast-photo {
+            width: 100%;
+            border-radius: 50%;
+            margin-bottom: 10px;
+            border: 3px solid #ff4757;
+        }
+
+        @media (max-width: 768px) {
+            .movie-details {
+                grid-template-columns: 1fr;
+            }
+            
+            .movie-title {
+                font-size: 2.5em;
+            }
+            
+            .specs {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <section class="hero">
+        <div class="hero-content">
+            <h1 class="movie-title">好东西</h1>
+            <p class="tagline">当命运成为礼物，你准备好接受了吗？</p>
+            <div class="specs">
+                <div class="spec-item">
+                    <div class="spec-label">上映年份</div>
+                    <div class="spec-value">2024</div>
+                </div>
+                <div class="spec-item">
+                    <div class="spec-label">片长</div>
+                    <div class="spec-value">128分钟</div>
+                </div>
+                <div class="spec-item">
+                    <div class="spec-label">IMDb评分</div>
+                    <div class="spec-value">8.9/10</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div class="movie-container">
+        <div class="movie-details">
+            <div class="poster">
+                <img src="https://example.com/main-poster.jpg" alt="好东西电影海报">
+            </div>
+            
+            <div class="info-box">
+                <h2>剧情简介</h2>
+                <p class="synopsis">
+                    在这个充满魔幻现实主义的现代寓言中，快递员陈默意外收到一个神秘包裹，里面装着能实现愿望的"好东西"。当他开始使用这些神奇物品时，发现每个愿望的实现都伴随着意想不到的代价。在欲望与道德的挣扎中，陈默必须做出最终抉择：继续索取，还是找回最初的自己...
+                </p>
+
+                <h2>主创团队</h2>
+                <div class="cast-grid">
+                    <div class="cast-member">
+                        <img src="https://example.com/director.jpg" class="cast-photo" alt="导演">
+                        <div>王小明</div>
+                        <div class="spec-label">导演</div>
+                    </div>
+                    <div class="cast-member">
+                        <img src="https://example.com/actor1.jpg" class="cast-photo" alt="主演">
+                        <div>张一川</div>
+                        <div class="spec-label">饰 陈默</div>
+                    </div>
+                    <div class="cast-member">
+                        <img src="https://example.com/actor2.jpg" class="cast-photo" alt="主演">
+                        <div>林雨菲</div>
+                        <div class="spec-label">饰 苏璃</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
