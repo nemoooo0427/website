@@ -23,27 +23,35 @@
             border-radius: 10px;
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
             text-align: left;
+            position: relative;
+        }
+        .overlay {
+            background: rgba(255, 255, 255, 0.7);
+            padding: 20px;
+            border-radius: 10px;
         }
         h1 {
             color: #333;
         }
+        .title span:nth-child(1) { color: #c76a45; }
+        .title span:nth-child(2) { color: #c25180; }
+        .title span:nth-child(3) { color: #889b4e; }
         p {
-            color: #fff;
+            color: #000;
             line-height: 1.6;
-            background: rgba(0, 0, 0, 0.5);
-            padding: 10px;
-            border-radius: 5px;
         }
     </style>
 </head>
 <body>
     <div class="container">
-        <h1>电影《好东西》</h1>
-        <p><strong>导演：</strong>邵艺辉</p>
-        <p><strong>主演：</strong>宋佳, 钟楚曦, 章宇, 赵又廷</p>
-        <p><strong>上映日期：</strong>2024年11月22日 (中国大陆)</p>
-        <p><strong>电影简介：</strong> 影片讲述了单亲妈妈王铁梅与邻居小叶之间的故事。两位性格迥异的女性，在面对生活挑战时，彼此温暖互相慰藉，展现了女性的力量与温暖。</p>
-        <p><strong>评分：</strong> 9.0 / 10 (豆瓣)</p>
+        <div class="overlay">
+            <h1 class="title">电影《<span>好</span><span>东</span><span>西</span>》</h1>
+            <p><strong>导演：</strong>邵艺辉</p>
+            <p><strong>主演：</strong>宋佳, 钟楚曦, 章宇, 赵又廷</p>
+            <p><strong>上映日期：</strong>2024年11月22日 (中国大陆)</p>
+            <p><strong>电影简介：</strong> 影片讲述了单亲妈妈王铁梅与邻居小叶之间的故事。两位性格迥异的女性，在面对生活挑战时，彼此温暖互相慰藉，展现了女性的力量与温暖。</p>
+            <p><strong>评分：</strong> 9.0 / 10 (豆瓣)</p>
+        </div>
     </div>
 </body>
 </html>
