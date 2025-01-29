@@ -40,7 +40,32 @@
             color: #000;
             line-height: 1.6;
         }
+        .spider-section {
+            margin-top: 20px;
+            padding: 20px;
+            background: rgba(255, 255, 255, 0.8);
+            border-radius: 10px;
+            text-align: center;
+        }
+        .spider-section h2 {
+            color: #333;
+        }
+        .spider-section button {
+            margin: 10px;
+            padding: 10px 20px;
+            border: none;
+            background: #c25180;
+            color: white;
+            font-size: 16px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
     </style>
+    <script>
+        function showPopup(title, content) {
+            alert(title + "\n\n" + content);
+        }
+    </script>
 </head>
 <body>
     <div class="container">
@@ -51,6 +76,13 @@
             <p><strong>上映日期：</strong>2024年11月22日 (中国大陆)</p>
             <p><strong>电影简介：</strong> 影片讲述了单亲妈妈王铁梅与邻居小叶之间的故事。两位性格迥异的女性，在面对生活挑战时，彼此温暖互相慰藉，展现了女性的力量与温暖。</p>
             <p><strong>评分：</strong> 9.0 / 10 (豆瓣)</p>
+            
+            <div class="spider-section">
+                <h2>使用 Selenium 制作的爬虫程序</h2>
+                <button onclick="showPopup('词云图', '这是豆瓣的词云图分析')">豆瓣</button>
+                <button onclick="showPopup('词云图', '这是小红书的词云图分析')">小红书 - 词云图</button>
+                <button onclick="showPopup('Gephi 语义网络', '这是小红书的 Gephi 语义网络分析')">小红书 - Gephi 语义网络</button>
+            </div>
         </div>
     </div>
 </body>
